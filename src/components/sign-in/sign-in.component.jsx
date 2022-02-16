@@ -4,6 +4,8 @@ import FormInput from "../../components/form-input/form-input.component";
 
 import CustomButton from "../custom-button/custom-button.component";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 import "./sign-in.styles.scss";
 
 export default function SignIn() {
@@ -50,8 +52,13 @@ export default function SignIn() {
           placeholder="Password"
           required="true"
         />
-
-        <CustomButton type="submit">SIGN IN</CustomButton>
+        <div className="buttons">
+          <CustomButton type="submit">SIGN IN</CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            {" "}
+            Sign in with Google{" "}
+          </CustomButton>
+        </div>
       </form>
     </div>
   );
