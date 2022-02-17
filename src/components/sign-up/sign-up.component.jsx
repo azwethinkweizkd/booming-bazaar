@@ -40,8 +40,6 @@ export default function SignUp() {
         password
       );
 
-      console.log(user);
-
       await createUserProfileDocument(user, { displayName });
 
       setFormState({
