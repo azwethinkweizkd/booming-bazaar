@@ -7,7 +7,7 @@ export default function StripeCheckoutBtn({ price }) {
     "pk_test_51KWuPLKphM6agqFd7XoBHtpu9ST6TwTPUUk6Yft06TMcXyvTNlReBqrIgM3zeN6BasszPA7YN2BtDstaGrNSTR9d00fv8OYQKw";
 
   const onToken = (token) => {
-    console.log(token);
+    // console.log(token);
     alert("Payment Successful");
   };
 
