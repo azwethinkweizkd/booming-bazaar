@@ -8,7 +8,7 @@ import { signUpStart } from "../../redux/user/user.actions";
 
 import { SignUpContainer, SignUpTitle } from "./sign-up.styles";
 
-const SignUp = (props) => {
+const SignUp = ({ signUpStart }) => {
   // console.log(props);
   const [formState, setFormState] = useState({
     displayName: "",
@@ -28,7 +28,7 @@ const SignUp = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { signUpStart } = props;
+
     const { displayName, email, password, confirmPassword } = formState;
 
     if (password !== confirmPassword) {

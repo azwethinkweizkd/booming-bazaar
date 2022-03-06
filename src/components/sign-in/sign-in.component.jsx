@@ -15,7 +15,7 @@ import {
   ButtonsBarContainer,
 } from "./sign-in.styles";
 
-const SignIn = (props) => {
+const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   // console.log(props);
   const [formState, setFormState] = useState({ email: "", password: "" });
 
@@ -30,13 +30,12 @@ const SignIn = (props) => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const { emailSignInStart } = props;
+
     const { email, password } = formState;
 
     emailSignInStart(email, password);
   };
 
-  const { googleSignInStart } = props;
   // console.log(googleSignInStart);
 
   return (
